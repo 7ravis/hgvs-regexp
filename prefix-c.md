@@ -14,3 +14,14 @@
 - *Group 2* = `+1`
 - *Group 3* = `G`
 - *Group 4* = `T`
+
+## Substitution - no change
+**Regular Expression:** `(?:[cC]\.)(\d+|\*\d+|-\d+)([+-]\d+)?=`
+- *non-capturing:* `c.` (required, case-insensitive)
+- *Group 1:* base position (required). If there is a `*` or `-` preceding the number, it will also be captured.
+- *Group 2:* base position offset (optional). This number will be captured with a preceding `+` or `-`.
+- *non-capturing:* `=` (required)
+
+**Example:** `c.-123-64=`
+- *Group 1* = `-123`
+- *Group 2* = `-64`
