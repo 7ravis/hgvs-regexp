@@ -16,12 +16,14 @@
 - *Group 4* = `T`
 
 ## Substitution - no change
-**Regular Expression:** `(?:[cC]\.)(\d+|\*\d+|-\d+)([+-]\d+)?=`
+**Regular Expression:** `(?:[cC]\.)(\d+|\*\d+|-\d+)([+-]\d+)?([GCTAgcta])?=`
 - *non-capturing:* `c.` (required, case-insensitive)
 - *Group 1:* base position (required). If there is a `*` or `-` preceding the number, it will also be captured.
 - *Group 2:* base position offset (optional). This number will be captured with a preceding `+` or `-`.
+- *Group 3:* reference allele (optional, case-insensitive)
 - *non-capturing:* `=` (required)
 
-**Example:** `c.-123-64=`
+**Example:** `c.-123-64G=`
 - *Group 1* = `-123`
 - *Group 2* = `-64`
+- *Group 3* = `G`
