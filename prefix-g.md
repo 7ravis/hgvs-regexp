@@ -38,3 +38,16 @@
 - *Group 2* = `14326`
 - *Group 3* = `TA`
 - *Group 4* = `C`
+
+## Deletion
+**Regular Expression:** `(?:[gG]\.)(\d+)(?:_(\d+))?del([GCTAgcta]+)?`
+- *non-capturing:* `g.` (required, case-insensitive)
+- *Group 1:* base position start (required)
+- *non-capturing:* `_` (optional)
+- *Group 2:* base position stop (optional, but required if `_` is present)
+- *non-capturing:* `del` (required)
+- *Group 3:* deletion sequence (optional, case-insensitive)
+
+**Example:** `g.19_21del`
+- *Group 1* = `19`
+- *Group 2* = `21`
