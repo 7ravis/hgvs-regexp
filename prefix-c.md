@@ -35,7 +35,7 @@
 - *Group 2:* base position start offset (optional). This number will be captured with a preceding `+` or `-`.
 - *non-capturing:* `_` (optional)
 - *Group 3:* base position stop (optional, but required if `_` is present). If there is a `*` or `-` preceding the number, it will also be captured.
-- *Group 4:* base position start offset (optional). This number will be captured with a preceding `+` or `-`.
+- *Group 4:* base position stop offset (optional). This number will be captured with a preceding `+` or `-`.
 - *Group 5:* reference sequence (optional, case-insensitive)
 - *non-capturing:* `delins` (required)
 - *Group 6:* alternate sequence (required, case-insensitive)
@@ -47,4 +47,19 @@
 - *Group 4* = `-56`
 - *Group 6* = `GA`
 
+## Deletion
+**Regular Expression:** `(?:[cC]\.)(\d+|\*\d+|-\d+)([+-]\d+)?(?:_(\d+|\*\d+|-\d+)([+-]\d+)?)?del([GCTAgcta]+)?`
+- *non-capturing:* `c.` (required, case-insensitive)
+- *Group 1:* base position start (required). If there is a `*` or `-` preceding the number, it will also be captured.
+- *Group 2:* base position start offset (optional). This number will be captured with a preceding `+` or `-`.
+- *non-capturing:* `_` (optional)
+- *Group 3:* base position stop (optional, but required if `_` is present). If there is a `*` or `-` preceding the number, it will also be captured.
+- *Group 4:* base position stop offset (optional). This number will be captured with a preceding `+` or `-`.
+- *non-capturing:* `del` (required)
+- *Group 5:* deleted sequence (optional, case-insensitive)
 
+**Example:** `c.*40-6_*40-2del`
+- *Group 1* = `*40`
+- *Group 2* = `-6`
+- *Group 3* = `*40`
+- *Group 4* = `-2`
