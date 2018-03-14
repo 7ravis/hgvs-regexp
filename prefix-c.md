@@ -29,7 +29,7 @@
 - *Group 3* = `G`
 
 ## Deletion-Insertion (indel)
-**Regular Expression:** `(?:[cC]\.)(\d+|\*\d+|-\d+)([+-]\d+)?(?:(?:_)(\d+|\*\d+|-\d+)([+-]\d+)?)?([GCTAgcta]+)?delins([GCTAgcta]+)`
+**Regular Expression:** `(?:[cC]\.)(\d+|\*\d+|-\d+)([+-]\d+)?(?:_(\d+|\*\d+|-\d+)([+-]\d+)?)?([GCTAgcta]+)?delins([GCTAgcta]+)`
 - *non-capturing:* `c.` (required, case-insensitive)
 - *Group 1:* base position start (required). If there is a `*` or `-` preceding the number, it will also be captured.
 - *Group 2:* base position start offset (optional). This number will be captured with a preceding `+` or `-`.
