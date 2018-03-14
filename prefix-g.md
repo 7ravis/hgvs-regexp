@@ -24,7 +24,7 @@
 - *Group 1* = `59283`
 
 ## Deletion-Insertion (indel)
-**Regular Expression:** `(?:[gG]\.)(\d+)(?:(?:_)(\d+|\*\d+|-\d+))?([GCTAgcta]+)?delins([GCTAgcta]+)`
+**Regular Expression:** `(?:[gG]\.)(\d+)(?:_(\d+))?([GCTAgcta]+)?delins([GCTAgcta]+)`
 - *non-capturing:* `g.` (required, case-insensitive)
 - *Group 1:* base position start (required)
 - *non-capturing:* `_` (optional)
