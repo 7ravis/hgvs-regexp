@@ -1,6 +1,5 @@
-#### work in progress
-*There are many [HGVS nomenclature types and sub-types](http://varnomen.hgvs.org), so my plan is to chip away at the types that I have the most experience with first (cDNA, genomic DNA, and protein). However, if you have any pressing requests, please create an issue because I'm happy to prioritize whichever type would be the most helpful. If you would like to contribute, please do! Each prefix sub-type (e.g. genomic DNA insertions) is a convenient size for a single sitting.* 
-
+## Work in Progress
+There are many [HGVS nomenclature types and sub-types](http://varnomen.hgvs.org), so my plan is to chip away at the types that I have the most experience with first (cDNA, genomic DNA, and protein). However, if you have any pressing requests, please create an issue because I'm happy to prioritize whichever type would be the most helpful. If you would like to contribute, please do! Each prefix sub-type (e.g. genomic DNA insertions) is a convenient size for a single sitting.
 
 ## Overview
 This project contains regular expressions for parsing HGVS ([Human Genome Variation Society](http://varnomen.hgvs.org)) sequence variant nomenclature. There are existing projects on Github that provide a high-level API for working with HGVS nomenclature; the purpose of this project is to create a lower-level tool with more focus and documentation on regular expressions that can be used under the hood in your own project.
