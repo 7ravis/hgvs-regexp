@@ -5,9 +5,9 @@ There are many [HGVS nomenclature types and sub-types](http://varnomen.hgvs.org)
 This project contains regular expressions for parsing HGVS ([Human Genome Variation Society](http://varnomen.hgvs.org)) sequence variant nomenclature. There are existing projects on Github that provide a high-level API for working with HGVS nomenclature; the purpose of this project is to create a lower-level tool with more focus and documentation on regular expressions that can be used under the hood in your own project.
 
 ## Format
-There is a prefix file for each HGVS sequence type. For example, the regular expressions for coding DNA are in the `prefix-c.md` file. These markdown files are generally organized by the sub-types used on the [HGVS website](http://varnomen.hgvs.org) (substitution, deletion-insertion, etc.). 
+There is a prefix file for each HGVS sequence type. For example, the regular expressions for coding DNA are in the [prefix-c.md](https://github.com/7ravis/hgvs-regexp/blob/master/prefix-c.md) file. These markdown files are generally organized by the sub-types used on the [HGVS website](http://varnomen.hgvs.org) (substitution, deletion-insertion, etc.). 
 
-**Example** (not necessarily up-to-date!) copied from the `prefix-c.md` file:
+**Example** (not necessarily up-to-date!) copied from the [prefix-c.md](https://github.com/7ravis/hgvs-regexp/blob/master/prefix-c.md) file:
 
 >### Substitution
 >**Regular Expression:** `[cC]\.(\d+|\*\d+|-\d+)([+-]\d+)?([GCTAgcta])?>([GCTAgcta])`
