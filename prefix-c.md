@@ -1,7 +1,7 @@
 # cDNA 
 
 ## Substitution - change
-**Regular Expression:** `(?:[cC]\.)(\d+|\*\d+|-\d+)([+-]\d+)?([GCTAgcta])?>([GCTAgcta])`
+**Regular Expression:** `[cC]\.(\d+|\*\d+|-\d+)([+-]\d+)?([GCTAgcta])?>([GCTAgcta])`
 - *non-capturing:* `c.` (required, case-insensitive)
 - *Group 1:* base position (required). If there is a `*` or `-` preceding the number, it will also be captured.
 - *Group 2:* base position offset (optional). This number will be captured with a preceding `+` or `-`.
@@ -16,7 +16,7 @@
 - *Group 4* = `T`
 
 ## Substitution - no change
-**Regular Expression:** `(?:[cC]\.)(\d+|\*\d+|-\d+)([+-]\d+)?([GCTAgcta])?=`
+**Regular Expression:** `[cC]\.(\d+|\*\d+|-\d+)([+-]\d+)?([GCTAgcta])?=`
 - *non-capturing:* `c.` (required, case-insensitive)
 - *Group 1:* base position (required). If there is a `*` or `-` preceding the number, it will also be captured.
 - *Group 2:* base position offset (optional). This number will be captured with a preceding `+` or `-`.
@@ -29,7 +29,7 @@
 - *Group 3* = `G`
 
 ## Deletion-Insertion (indel)
-**Regular Expression:** `(?:[cC]\.)(\d+|\*\d+|-\d+)([+-]\d+)?(?:_(\d+|\*\d+|-\d+)([+-]\d+)?)?([GCTAgcta]+)?delins([GCTAgcta]+)`
+**Regular Expression:** `[cC]\.(\d+|\*\d+|-\d+)([+-]\d+)?(?:_(\d+|\*\d+|-\d+)([+-]\d+)?)?([GCTAgcta]+)?delins([GCTAgcta]+)`
 - *non-capturing:* `c.` (required, case-insensitive)
 - *Group 1:* base position start (required). If there is a `*` or `-` preceding the number, it will also be captured.
 - *Group 2:* base position start offset (optional). This number will be captured with a preceding `+` or `-`.
@@ -48,7 +48,7 @@
 - *Group 6* = `GA`
 
 ## Deletion
-**Regular Expression:** `(?:[cC]\.)(\d+|\*\d+|-\d+)([+-]\d+)?(?:_(\d+|\*\d+|-\d+)([+-]\d+)?)?del([GCTAgcta]+)?`
+**Regular Expression:** `[cC]\.(\d+|\*\d+|-\d+)([+-]\d+)?(?:_(\d+|\*\d+|-\d+)([+-]\d+)?)?del([GCTAgcta]+)?`
 - *non-capturing:* `c.` (required, case-insensitive)
 - *Group 1:* base position start (required). If there is a `*` or `-` preceding the number, it will also be captured.
 - *Group 2:* base position start offset (optional). This number will be captured with a preceding `+` or `-`.
