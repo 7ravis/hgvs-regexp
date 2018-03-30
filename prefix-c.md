@@ -96,4 +96,19 @@
 - *Group 3* = `*77`
 - *Group 4* = `-1`
 
+## Duplication - simple
+**Regular Expression:** `[cC]\.(\d+|\*\d+|-\d+)([+-]\d+)?(?:_(\d+|\*\d+|-\d+)([+-]\d+)?)?dup([GCTAgcta]+)?`
+- *non-capturing:* `c.` (required, case-insensitive)
+- *Group 1:* base position start (required). If there is a `*` or `-` preceding the number, it will also be captured.
+- *Group 2:* base position start offset (optional). This number will be captured with a preceding `+` or `-`.
+- *non-capturing:* `_` (optional)
+- *Group 3:* base position stop (optional, but required if `_` is present). If there is a `*` or `-` preceding the number, it will also be captured.
+- *Group 4:* base position stop offset (optional). This number will be captured with a preceding `+` or `-`.
+- *non-capturing:* `dup` (required)
+- *Group 5:* duplicated sequence (optional, case-insensitive)
+
+**Example:** `c.-20-2dupT`
+- *Group 1* = `-20`
+- *Group 2* = `-2`
+- *Group 5* = `T`
 
