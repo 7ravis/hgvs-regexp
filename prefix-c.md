@@ -64,7 +64,7 @@
 - *Group 3* = `*40`
 - *Group 4* = `-2`
 
-## Insertion
+## Insertion - simple
 **Regular Expression:** `[cC]\.(\d+|\*\d+|-\d+)([+-]\d+)?_(\d+|\*\d+|-\d+)([+-]\d+)?ins([GCTAgcta]+)`
 - *non-capturing:* `c.` (required, case-insensitive)
 - *Group 1:* base position start (required). If there is a `*` or `-` preceding the number, it will also be captured.
