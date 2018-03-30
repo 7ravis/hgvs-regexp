@@ -80,3 +80,20 @@
 - *Group 3* = `241`
 - *Group 5* = `AGG`
 
+## Inversion
+**Regular Expression:** `[cC]\.(\d+|\*\d+|-\d+)([+-]\d+)?_(\d+|\*\d+|-\d+)([+-]\d+)?inv`
+- *non-capturing:* `c.` (required, case-insensitive)
+- *Group 1:* base position start (required). If there is a `*` or `-` preceding the number, it will also be captured.
+- *Group 2:* base position start offset (optional). This number will be captured with a preceding `+` or `-`.
+- *non-capturing:* `_` (required)
+- *Group 3:* base position stop (required). If there is a `*` or `-` preceding the number, it will also be captured.
+- *Group 4:* base position stop offset (optional). This number will be captured with a preceding `+` or `-`.
+- *non-capturing:* `inv` (required)
+
+**Example:** `c.*77-10_*77-1inv`
+- *Group 1* = `*77`
+- *Group 2* = `-10`
+- *Group 3* = `*77`
+- *Group 4* = `-1`
+
+
