@@ -63,3 +63,20 @@
 - *Group 2* = `-6`
 - *Group 3* = `*40`
 - *Group 4* = `-2`
+
+## Insertion
+**Regular Expression:** `[cC]\.(\d+|\*\d+|-\d+)([+-]\d+)?_(\d+|\*\d+|-\d+)([+-]\d+)?ins([GCTAgcta]+)`
+- *non-capturing:* `c.` (required, case-insensitive)
+- *Group 1:* base position start (required). If there is a `*` or `-` preceding the number, it will also be captured.
+- *Group 2:* base position start offset (optional). This number will be captured with a preceding `+` or `-`.
+- *non-capturing:* `_` (required)
+- *Group 3:* base position stop (required). If there is a `*` or `-` preceding the number, it will also be captured.
+- *Group 4:* base position stop offset (optional). This number will be captured with a preceding `+` or `-`.
+- *non-capturing:* `ins` (required)
+- *Group 5:* inserted sequence (required, case-insensitive)
+
+**Example:** `c.240_241insAGG`
+- *Group 1* = `240`
+- *Group 3* = `241`
+- *Group 5* = `AGG`
+
